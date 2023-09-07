@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <h2 class="cssstyling">header tag </h2>
+    <h4>hello !</h4>
+    <h3 id="idremoved">hey</h3>
+    <h2 id="id1">javascript</h2>
+
+    <script>
+        // change css
+        $(".cssstyling").css("background-color", "green")
+        $(".cssstyling").css("color", "yellow")
+
+        //  add id to an element 
+        $("h4").attr("id", "my-id");
+        // id is addded as there's a change in the element 
+        $("#my-id").text("id is added");
+
+        // remove id 
+        $("#idremoved").removeAttr("id");
+        // check if id is removed
+        // no change ain the element hence the id is removed 
+
+        $("#idremoved").text("id is removed");
+
+        // check if the element has a specific id 
+        if ($("#id1").attr("id") === ("id1")) {
+            alert("element has the id of id1 which is an exact match")
+        }
+
+
+    </script>
+</body>
+
+</html>

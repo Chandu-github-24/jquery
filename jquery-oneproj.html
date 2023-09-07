@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+
+<body>
+
+    <div class="nav-bar">
+        <ul>
+            <li>Home</li>
+            <li>about</li>
+            <li>services</li>
+            <li>contact</li>
+        </ul>
+
+    </div>
+
+    <div >
+        <h1 class="container">welcome to our web site </h1>
+        <h2 class="Tswitch">toggle switch </h2>
+    </div>
+
+    <div class="websitePara">
+        hello World!
+
+    </div>
+    <br><br>
+    <a href="https://www.facebook.com/" target="_blank">facebook</a>
+    <br><br>
+
+    <button class="text">change text</button>
+    <button class="background">change background color</button>
+    <button class="changehurl">change href</button>
+ 
+
+    <script>
+
+        $(document).ready(function () {
+            $(".text").click(function () {
+                $(".websitePara").text("changed the text")
+            });
+        })
+
+        $(document).ready(function () {
+            $(".background").click(function () {
+                $(".websitePara").css("background-color", "red")
+            });
+        })
+
+        $(document).ready(function () {
+            $(".changehurl").click(function () {
+                $(".websitePara").attr("background-color", "red")
+            });
+        })
+
+        $(document).ready(function () {
+            $(".changehurl").click(function () {
+
+                $("a").text("google").attr("href", "https://www.google.com/");
+            });
+        });
+        $(".container").attr("id", "containerID")
+        if ($("#containerID").attr("id") === ("containerID")) {
+            alert("id is added to the container")
+        }
+
+         $("#containerID").text("changing the container by adding id ");
+
+        //  toggle 
+        $(".Tswitch").click(function () {
+            $(this).toggle()
+        });
+    </script>
+</body>
+
+</html>

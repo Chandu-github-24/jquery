@@ -1,0 +1,18 @@
+ .nav-bar ul {
+     display: flex;
+     align-items: center;
+     justify-content: start;
+     text-align: center;
+     background-color: blue;
+     padding: 10px 0 10px;
+     color: white;
+ }
+
+ .nav-bar ul li {
+    padding-left: 30px;
+     list-style: none;
+    
+ }
+ a{
+    list-style: none;
+ }

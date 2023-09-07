@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+body {
+    background-color: rgba(21, 93, 49, 0.269);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 500px;
+    width: 350px;
+    background-color: white;
+    margin-top: 40px;
+
+}
+
+#inputid {
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    background: rgb(92, 30, 48);
+    color: white;
+    padding: 5px 10px;
+    margin: 0;
+}
+
+#inputid ::placeholder {
+    color: #bbb;
+}
+
+ul li {
+    background: #e9d37e;
+    color: #333;
+    height: 40px;
+    border-radius: 40px;
+    margin: 10px 0px;
+    padding: 10px;
+    list-style: none;
+    margin: 10px 10px;
+
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+
+}
+
+ul .fa-check {
+    position: absolute;
+    right: 40px;
+    color: green;
+}
+
+ul .fa-trash {
+    position: absolute;
+    right: 15px;
+    color: red;
+}
+
+ul .checked {
+    background: lightgreen;
+    text-decoration: line-through;
+    transform: .2s;
+}

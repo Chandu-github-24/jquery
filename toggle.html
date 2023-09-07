@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h1 class="element">hello programmer </h1>
+    <div id="element-1">hello world</div>
+
+    <h2 id="class3" class="classes">removing class</h2>
+
+
+    <h1 class="virtual">checking class</h1>
+
+    <h2 class="cssstyling">header tag </h2>
+
+    <script>
+        $(".element").click(function () {
+            $(this).toggle()
+        })
+        //  adding class
+        $("#element-1").addClass("myClass");
+        //  remove class
+        $("#class3").removeClass("classes")
+
+        $(".classes").text("change this if class is present ");
+        // change could not be made as class is removed
+
+
+        $(".myClass").text("class is being Added");
+        // change made possible as class was added
+
+
+
+        //  class name exists or not 
+        $(".virtual").hasClass(alert("class is present 'virtual' "))
+
+        //  change css 
+        $(".cssstyling").css("background-color","green")
+        $(".cssstyling").css("color","yellow")
+
+    </script>
+</body>
+
+</html>

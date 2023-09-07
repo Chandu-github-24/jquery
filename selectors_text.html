@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+
+    <p class="highlight"> this is paragraph with 'highlight' class</p>
+    <p>this is a normal paragraph</p>
+    <button id="chnagetxtbtn">change text</button>
+
+    <script>
+        $(document).ready(function () {
+            $("p.highlight,p:contains('normal')").css("background-color", "green");
+        })
+
+        $(document).ready(function () {
+            $("#chnagetxtbtn").click(function () {
+                $("p.highlight,p:contains('normal')").text("hello world!")
+                // color doesnt change coz text changed to hello world not "normal "
+                $("p.highlight,p:contains('normal')").css("background-color", "red");
+            })
+        })
+    </script>
+</body>
+
+</html>

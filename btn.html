@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h1>delete a jquery function</h1>
+
+    <button id="clickme">click here</button>
+
+    <button id="btn">click this </button>
+    <script>
+        $(document).ready(function () {
+            $("#clickme").click(function () {
+                alert("button clicked")
+                //  deleting the click event function
+                $(this).off("click")
+            })
+        })
+        
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                alert("btn clciked")
+                $(this).off("click")
+            })
+        })
+
+
+    </script>
+</body>
+
+</html>
