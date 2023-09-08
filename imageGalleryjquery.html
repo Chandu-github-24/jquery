@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image gallery</title>
+    <!-- jQuery  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <style>
+        body {
+            background-image: linear-gradient(to right, blue, red);
+            text-align: center;
+
+        }
+
+        /* 
+        h1 {
+            margin-top: 2px;
+        } */
+
+        .btnFilter {
+            margin-top: 15px 0px;
+        }
+
+        .btn-Filter {
+            border-radius: 15px;
+            outline: 0;
+            margin: 8px;
+            padding: 8px;
+            border: 0;
+            background-color: grey;
+            color: whitesmoke;
+        }
+
+        #image_gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        }
+        .imgConatiner{
+            width: 400px;
+            height: 400px;
+        }
+
+        .imgConatiner img {
+            width: 200px;
+            height: 133px;
+            padding: 10px;
+        }
+
+        .resize {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Image Gallery</h1>
+
+    <div class="btnFilter" id="btnfilterid">
+        <button class="btn-Filter" data-category="all">All</button>
+        <button class="btn-Filter" data-category="nature">Nature</button>
+        <button class="btn-Filter" data-category="animal">Animal</button>
+        <button class="btn-Filter" data-category="city">City</button>
+        <button class="btn-Filter" data-category="ice">Ice cream</button>
+        <button class="btn-Filter" data-category="sports">sports</button>
+        <button class="btn-Filter" data-category="laptop">laptops</button>
+    </div>
+    <div id="image_gallery">
+
+    </div>
+
+    <script>
+        //    sample image data       // 
+        $(document).ready(function () {
+            const imageDATA = [
+                { name: 'image1', category: 'animal', URL: "image_1.jpeg" },
+                { name: 'image2', category: 'nature', URL: "image2.jpeg" },
+                { name: 'image3', category: 'nature', URL: "image3.jpg" },
+                { name: 'image4', category: 'nature', URL: "image4.jpg" },
+                { name: 'image5', category: 'animal', URL: 'image5.jpg' },
+                { name: 'image5', category: 'animal', URL: 'image5.jpg' },
+                { name: 'image5', category: 'animal', URL: 'image5.jpg' },
+                { name: 'image5', category: 'animal', URL: 'image5.jpg' },
+                { name: 'image5', category: 'animal', URL: 'image5.jpg' },
+                { name: 'image5', category: 'animal', URL: 'image5.jpg' },
+                { name: 'image5', category: 'animal', URL: 'image5.jpg' },
+                { name: 'image5', category: 'animal', URL: 'image5.jpg' },
+                { name: 'image5', category: 'animal', URL: 'image5.jpg' },
+                { name: 'image5', category: 'animal', URL: 'image5.jpg' },
+                { name: 'image5', category: 'animal', URL: 'image5.jpg' },
+
+
+            ];
+
+
+            function filterImages(category) {
+                $("#image_gallery").empty();
+
+                imageDATA.forEach(function (image) {
+                    if (category === "all" || image.category === category) {
+                        const $imgcontainer = $('<div class="imgConatiner"></div>');
+                        const $img = $('<img>').attr('src', image.URL).attr('alt', image.name);
+
+                        $imgcontainer.append($img);
+                        $("#image_gallery").append($imgcontainer);
+
+                    };
+                });
+
+            };
+            //  initial display of all images
+            filterImages('all');
+            $('.btn-Filter').click(function () {
+                const category = $(this).data('category');
+                filterImages(category);
+            });
+        });
+
+    </script>
+</body>
+
+</html>
